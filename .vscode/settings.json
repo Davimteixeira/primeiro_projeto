@@ -3,7 +3,9 @@
     "python.languageServer": "Pylance", // ms-python.vscode-pylance
     "python.testing.unittestEnabled": false, // ms-python.python
     "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": [], // -x to bail
+    "python.testing.pytestArgs": [
+      "."
+    ], // -x to bail
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.pylintArgs": [
@@ -71,6 +73,10 @@
     "editor.wordWrap": "on",
     "explorer.compactFolders": false,
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "cSpell.userWords": [
+      "eoxf",
+      "vrxold"
+    ]
     
 }
