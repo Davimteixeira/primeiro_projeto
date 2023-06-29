@@ -39,8 +39,11 @@ def search(request):
     search_term = request.GET.get('q', '').strip()
     
     rerecipes = Recipe.objects.filter(
-        Q(title__icontains=search_term) |
-        Q(description__icontains=search_term),
+         Q(
+            Q(title__icontains=search_term) |
+            Q(description__icontains=search_term),
+        ),
+        is_published=True
     ).order_by('-id')
     
     if not search_term:
