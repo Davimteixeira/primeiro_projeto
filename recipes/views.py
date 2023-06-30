@@ -38,7 +38,7 @@ def recipe(request, id):
 def search(request):
     search_term = request.GET.get('q', '').strip()
     
-    rerecipes = Recipe.objects.filter(
+    recipes = Recipe.objects.filter(
          Q(
             Q(title__icontains=search_term) |
             Q(description__icontains=search_term),
