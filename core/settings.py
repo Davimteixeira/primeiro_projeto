@@ -83,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'recipes',
-        'USER':'user_con',
-        'PASSWORD':'12345678',
+        'USER':'postgres',
+        'PASSWORD':'postgres',
         'HOST':'localhost',
     }
 }
