@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
-from utils.djnago_forms import add_placeholder, strong_password
+from utils.django_forms import add_placeholder, strong_password
 
 class RegisterForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
