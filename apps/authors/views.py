@@ -98,8 +98,21 @@ def dashboard_recipe_edit(request, id):
     
     form = AuthorRecipeForm(
         data=request.POST or None,
+        files=request.FILES or None,
         instance=recipe
     )
+
+    if form.is_valid():
+        recipe = form.save(commit=False)
+
+        recipe.author = request.user
+        recipe.preparationa_steps_is_html = False
+        recipe.is_published = False
+
+        recipe.save()
+
+        messages.success(request, 'sua receita foi salva por sucesso!')
+        return redirect(reverse('authors:dashboard_recipe_edit', args=(id,)))
 
     return render(
         request,
