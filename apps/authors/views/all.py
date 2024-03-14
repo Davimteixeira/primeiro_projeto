@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
-from .forms import LoginForm, RegisterForm
+from apps.authors.forms import LoginForm, RegisterForm
 from apps.recipes.models import Recipe
 from apps.authors.forms.recipe_form import AuthorRecipeForm
 
