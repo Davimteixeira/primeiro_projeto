@@ -18,12 +18,13 @@ SELENIUM_HEADLESS = 1
 # DATABASE_ENGINE='django.db.backends.postgresql'
 # DATABASE_NAME="basededados"
 
-DATABASE_ENGINE = ''
-POSTGRES_DB_NAME = ''
-POSTGRES_USER = ''
-POSTGRES_PASS =''
-POSTGRES_HOST = ''
-POSTGRES_PORT = ''
+DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
+DATABASE_NAME = "django"
+DATABASE_USER = "davi"
+DATABASE_PASSWORD = "@postgres9090"
+DATABASE_HOST = "127.0.0.1"
+DATABASE_PORT = "5432"
+
 
 # Comma separated values
 ALLOWED_HOSTS = '127.0.0.1, localhost,'
